@@ -3,7 +3,7 @@
 Summary:        HandBrake
 Name:           handbrake
 Version:        0.10.0.20150122
-Release:        1%{?dist}
+Release:        2%{?dist}
 Group:          System Environment/Base
 License:        GPLv2+
 URL:            http://handbrake.rf
@@ -47,6 +47,9 @@ cp -a build/HandbrakeCLI %{buildroot}/usr/bin/HandbrakeCLI
 #%attr(0644,root,root)   %{_unitdir}/rngd.service
 
 %changelog
+* Thu Jan 22 2015 Michael J. Ayers <ayersm@gmail.com> 0.10.0.20150122-2
+- Fixed configure arguments (ayersm@gmail.com)
+
 * Thu Jan 22 2015 Michael J. Ayers <ayersm@gmail.com> 0.10.0.20150122-1
 - new package built with tito
 
