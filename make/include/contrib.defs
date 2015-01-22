@@ -84,7 +84,7 @@ define import.CONTRIB.defs
     $(1).CONFIGURE.args.build  = --build=$$(1)
     $(1).CONFIGURE.args.prefix = --prefix=$$(1)
 
-    $(1).CONFIGURE.args = !sete @dir !bootstrap !env !exe @host @build @prefix !deps !shared !static !extra
+    $(1).CONFIGURE.args = !sete @dir !bootstrap !env !exe @build @prefix !deps !shared !static !extra
 
     $(1).CONFIGURE.env.LOCAL_PATH =
     $(1).CONFIGURE.env.CC       = CC=$$($(1).GCC.gcc)
