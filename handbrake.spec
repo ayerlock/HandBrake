@@ -26,8 +26,8 @@ Handbrake
 %build
 #./configure --enable-opencl --disable-gtk --enable-local-yasm --launch --launch-jobs=%{_cpus} --force
 #./configure --disable-gtk --enable-local-yasm --launch --launch-jobs=%{_cpus} --force
-#./configure --disable-gtk --launch --launch-jobs=%{_cpus} --force
-%configure --disable-gtk --launch --launch-jobs=%{_cpus} --force
+./configure --disable-gtk --launch --launch-jobs=%{_cpus} --force
+#%configure --disable-gtk --launch --launch-jobs=%{_cpus} --force
 #%configure
 #make %{?_smp_mflags}
 
