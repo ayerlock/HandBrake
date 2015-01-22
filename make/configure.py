@@ -1187,6 +1187,30 @@ def createCLI():
         help='specify install dir for products [%s]' % (cfg.prefix_dir) )
     cli.add_option_group( grp )
 
+    ## RPM configure macro options -- Currently these do nothing --
+    grp = OptionGroup( cli, 'RPM Configure Options' )
+
+    ##### Installation paths
+    grp.add_option( '--exec-prefix', default="/usr", action='store', metavar='DIR', help='specify install dir' )
+    grp.add_option( '--bindir', default="/bin", action='store', metavar='DIR', help='specify binary install dir' )
+    grp.add_option( '--sbindir', default="/usr/sbin", action='store', metavar='DIR', help='specify binary install dir' )
+    grp.add_option( '--sysconfdir', default="/etc", action='store', metavar='DIR', help='specify configuration install path' )
+    grp.add_option( '--datadir', default="/usr/share", action='store', metavar='DIR', help='specify shared install path' )
+    grp.add_option( '--includedir', default="/usr/include", action='store', metavar='DIR', help='specify include' )
+    grp.add_option( '--libdir', default="/usr/lib64", action='store', metavar='DIR', help='specify library path' )
+    grp.add_option( '--libexecdir', default="/usr/libexec", action='store', metavar='DIR', help='specify library path' )
+    grp.add_option( '--localstatedir', default="/var", action='store', metavar='DIR', help='specify local state path' )
+    grp.add_option( '--sharedstatedir', default="/var/lib", action='store', metavar='DIR', help='specify local state library path' )
+    grp.add_option( '--mandir', default="/usr/share/man", action='store', metavar='DIR', help='specify man page installation path' )
+    grp.add_option( '--infodir', default="/usr/share/info", action='store', metavar='DIR', help='specify info page installation path' )
+
+    ##### Build options
+    grp.add_option( '--host', default=None, action='store', help='host type' )
+    grp.add_option( '--program-prefix', default=None, action='store', help='program prefix' )
+    grp.add_option( '--disable-dependency-tracking', default=False, action='store_true', help='disable dependency tracking' )
+
+    cli.add_option_group( grp )
+
     ## add feature options
     grp = OptionGroup( cli, 'Feature Options' )
 
